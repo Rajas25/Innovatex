@@ -79,7 +79,7 @@ An AI-assisted document screening system designed to analyze identity documents,
               ▼                           ▼
      ┌─────────────────┐        ┌─────────────────┐
      │    Document     │        │    Document     │
-     │    Validation   │        │    Integrity     │
+     │    Validation   │        │    Integrity    │
      └────────┬────────┘        └────────┬────────┘
               │                          │
               └─────────────┬────────────┘
