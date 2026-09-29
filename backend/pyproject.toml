@@ -1,0 +1,22 @@
+[project]
+name = "wm-security-assessment-backend"
+version = "1.0.0"
+description = "Authorized security assessment workbench for the World Monitor application (Problem Statement ID 26163)."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101", "S105", "S106", "S107", "S311", "S324", "S501", "S506"]
+# S101 assert            — used in tests
+# S105/S106/S107 secrets — the mock DB intentionally contains dummy creds
+# S311 random            — used for lab tokens, not cryptographic material
+# S324 md5/sha1          — used to *demonstrate* weak hashing in Lab 12
+# S501 verify=False      — used to *demonstrate* TLS bypass in Lab 11
